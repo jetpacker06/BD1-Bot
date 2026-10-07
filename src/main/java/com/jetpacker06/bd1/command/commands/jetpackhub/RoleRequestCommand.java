@@ -4,7 +4,7 @@ import com.jetpacker06.bd1.BD1;
 import com.jetpacker06.bd1.util.Util;
 import com.jetpacker06.bd1.util.entity.entities.UserIDs;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.PrivateChannel;
+import net.dv8tion.jda.api.entities.channel.concrete.PrivateChannel;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 

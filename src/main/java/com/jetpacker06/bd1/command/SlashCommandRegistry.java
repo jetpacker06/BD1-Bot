@@ -19,7 +19,7 @@ public class SlashCommandRegistry {
         put(new ThinkCommand());
         put(new ToStacksCommand());
         put(new MarieCommand());
-        put(new RoleMenuCommand());
+       // put(new RoleMenuCommand());
         put(new ChatIsThisRealCommand());
         put(new CoinFlipCommand());
 

@@ -3,9 +3,9 @@ package com.jetpacker06.bd1.terminal;
 import com.jetpacker06.bd1.BD1;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.PrivateChannel;
-import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
+import net.dv8tion.jda.api.entities.channel.concrete.PrivateChannel;
+import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -59,7 +59,7 @@ public class Terminal {
             channel.getIterableHistory().takeAsync(100).thenApply(messages -> {
                 for (Message message : messages) {
                     if (message.getIdLong() == messageID) {
-                        message.reply(repairMessage(list)).reference(message).failOnInvalidReply(true) .queue();
+                        message.reply(repairMessage(list)).setMessageReference(message).failOnInvalidReply(true) .queue();
                         break;
                     }
                 }

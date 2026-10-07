@@ -3,19 +3,19 @@ package com.jetpacker06.bd1.command.commands.common;
 import com.jetpacker06.bd1.BD1;
 import com.jetpacker06.bd1.command.commands.Command;
 import com.jetpacker06.bd1.util.Util;
+import net.dv8tion.jda.api.components.selections.SelectMenu;
+import net.dv8tion.jda.api.components.selections.SelectOption;
 import net.dv8tion.jda.api.entities.*;
+import net.dv8tion.jda.api.entities.channel.concrete.PrivateChannel;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
-import net.dv8tion.jda.api.events.interaction.component.SelectMenuInteractionEvent;
+import net.dv8tion.jda.api.events.interaction.component.StringSelectInteractionEvent;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
-import net.dv8tion.jda.api.interactions.components.selections.SelectMenu;
 import net.dv8tion.jda.api.interactions.components.selections.SelectMenuInteraction;
-import net.dv8tion.jda.api.interactions.components.selections.SelectOption;
-import net.dv8tion.jda.api.requests.restaction.MessageAction;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
+/*
 public class RoleMenuCommand extends Command {
 
     @Override
@@ -70,17 +70,17 @@ public class RoleMenuCommand extends Command {
         event.reply("done").setEphemeral(true).queue();
     }
 
-    public static void onRoleCommandInteraction(SelectMenuInteractionEvent event) {
+    public static void onRoleCommandInteraction(StringSelectInteractionEvent event) {
         SelectMenuInteraction interaction = event.getInteraction();
         Guild guild = Objects.requireNonNull(event.getGuild());
 
         for (SelectOption option : event.getSelectedOptions()) {
             guild.addRoleToMember(event.getUser(), Objects.requireNonNull(BD1.jda.getRoleById(option.getValue()))).queue();
         }
-        List<SelectOption> notSelected = interaction.getSelectMenu().getOptions().stream().filter(o -> !event.getSelectedOptions().contains(o)).toList();
+        List<SelectOption> notSelected = interaction.getSelectMenu().().stream().filter(o -> !event.getSelectedOptions().contains(o)).toList();
         for (SelectOption option : notSelected) {
             guild.removeRoleFromMember(event.getUser(), Objects.requireNonNull(BD1.jda.getRoleById(option.getValue()))).queue();
         }
         interaction.reply("done").setEphemeral(true).queue();
     }
-}
+}*/
